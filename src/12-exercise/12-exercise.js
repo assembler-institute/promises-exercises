@@ -24,7 +24,19 @@
  */
 
 // Finish the code of the function
-function exercise12(url = "https://jsonplaceholder.typicode.com/users/1") {}
+async function exercise12(
+    url = "https://jsonplaceholder.typicode.com/users/1"
+) {
+    try {
+        const result = await fetch(url);
+
+        const json = await result.json();
+
+        console.log(json);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 // Don’t change the code bellow this line
 import setup12Exercise from "./12-exercise-setup";

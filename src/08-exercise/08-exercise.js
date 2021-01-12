@@ -24,11 +24,19 @@
 
 // Finish the code of the function
 function exercise08(a, b) {
-    if (a === undefined || b === undefined) {
-        return "Both params need to be defined!";
-    }
+    // if (a === undefined || b === undefined) {
+    //     return "Both params need to be defined!";
+    // }
 
-    return a + b;
+    // return a + b;
+
+    return new Promise((resolve, reject) => {
+        if (a === undefined || b === undefined) {
+            reject("Both params need to be defined!");
+        }
+
+        resolve(a + b);
+    });
 }
 
 // Don’t change the code bellow this line

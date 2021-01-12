@@ -11,7 +11,9 @@
  */
 
 // Finish the code of the function
-function exercise03() {}
+function exercise03(reason) {
+    return Promise.reject(reason);
+}
 
 // Don’t change the code bellow this line
 import setup03Exercise from "./03-exercise-setup";

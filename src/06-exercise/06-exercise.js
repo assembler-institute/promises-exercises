@@ -16,7 +16,11 @@
  */
 
 // Finish the code of the function
-function exercise06() {}
+function exercise06(reason) {
+    return new Promise((resolve, reject) => {
+        reject(reason);
+    });
+}
 /**
  * Finish the code of the `exercise06Chain` function bellow
  * so that it:
@@ -39,7 +43,11 @@ function exercise06() {}
  */
 
 // Finish the code of the function
-function exercise06Chain() {}
+function exercise06Chain(reason) {
+    return exercise06(reason).catch((result) => {
+        console.log(result);
+    });
+}
 
 // Don’t change the code bellow this line
 import setup06Exercise from "./06-exercise-setup";

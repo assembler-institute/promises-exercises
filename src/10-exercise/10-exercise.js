@@ -15,7 +15,11 @@
  */
 
 // Finish the code of the function
-function exercise10() {}
+async function exercise10(promise) {
+    const res = await promise();
+
+    console.log(res);
+}
 
 // Don’t change the code bellow this line
 import setup10Exercise from "./10-exercise-setup";

@@ -15,7 +15,15 @@
  */
 
 // Finish the code of the function
-function exercise07() {}
+function exercise07(shouldFail, message) {
+    return new Promise((resolve, reject) => {
+        if (shouldFail) {
+            reject(message);
+        }
+
+        resolve(message);
+    });
+}
 
 /**
  * Finish the code of the `exercise07Chain` function bellow
@@ -41,7 +49,15 @@ function exercise07() {}
  */
 
 // Finish the code of the function
-function exercise07Chain() {}
+function exercise07Chain(shouldFail, message) {
+    return exercise07(shouldFail, message)
+        .then((message) => {
+            console.log(message);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
 
 // Don’t change the code bellow this line
 import setup07Exercise from "./07-exercise-setup";

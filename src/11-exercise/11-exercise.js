@@ -16,7 +16,13 @@
  */
 
 // Finish the code of the function
-function exercise11() {}
+async function exercise11(promise) {
+    try {
+        await promise();
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 // Don’t change the code bellow this line
 import setup11Exercise from "./11-exercise-setup";

@@ -16,7 +16,11 @@
  */
 
 // Finish the code of the function
-function exercise05() {}
+function exercise05(message) {
+    return new Promise((resolve) => {
+        resolve(message);
+    });
+}
 /**
  * Finish the code of the `exercise05Chain` function bellow
  * so that it:
@@ -39,7 +43,11 @@ function exercise05() {}
  */
 
 // Finish the code of the function
-function exercise05Chain() {}
+function exercise05Chain(message) {
+    return exercise05(message).then((result) => {
+        console.log(result);
+    });
+}
 
 // Don’t change the code bellow this line
 import setup05Exercise from "./05-exercise-setup";

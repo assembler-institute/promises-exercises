@@ -7,7 +7,9 @@
  */
 
 // Finish the code of the function
-function exercise02() {}
+function exercise02(message) {
+    return Promise.resolve(message);
+}
 /**
  * Finish the code of the `exercise02Chain` function bellow
  * so that it:
@@ -30,7 +32,11 @@ function exercise02() {}
  */
 
 // Finish the code of the function
-function exercise02Chain() {}
+function exercise02Chain(message) {
+    return exercise02(message).then((result) => {
+        console.log(result);
+    });
+}
 
 // Don’t change the code bellow this line
 import setup02Exercise from "./02-exercise-setup";

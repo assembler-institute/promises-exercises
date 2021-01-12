@@ -7,7 +7,9 @@
  */
 
 // Finish the code of the function
-function exercise04() {}
+function exercise04(reason) {
+    return Promise.reject(reason);
+}
 /**
  * Finish the code of the `exercise04Chain` function bellow
  * so that it:
@@ -30,7 +32,11 @@ function exercise04() {}
  */
 
 // Finish the code of the function
-function exercise04Chain() {}
+function exercise04Chain(reason) {
+    return exercise04(reason).catch((result) => {
+        console.log(result);
+    });
+}
 
 // Don’t change the code bellow this line
 import setup04Exercise from "./04-exercise-setup";

@@ -13,7 +13,11 @@
  */
 
 // Finish the code of the function
-function exercise09() {}
+function exercise09(promise1, promise2, promise3) {
+    return Promise.all([promise1, promise2, promise3]).then((results) => {
+        console.log(results[1]);
+    });
+}
 
 // Don’t change the code bellow this line
 import setup09Exercise from "./09-exercise-setup";

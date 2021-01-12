@@ -11,7 +11,9 @@
  */
 
 // Finish the code of the function
-function exercise01() {}
+function exercise01(value) {
+    return Promise.resolve(value);
+}
 
 // Don’t change the code bellow this line
 import setup01Exercise from "./01-exercise-setup";
